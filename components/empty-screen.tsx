@@ -6,16 +6,16 @@ import { IconArrowRight } from '@/components/ui/icons'
 
 const exampleMessages = [
   {
-    heading: 'Explain technical concepts',
-    message: `What is a "serverless function"?`
+    heading: 'Search for documents and files',
+    message: `Where can I find our Q4 KPI documents?`
   },
   {
-    heading: 'Summarize an article',
-    message: 'Summarize the following article for a 2nd grader: \n'
+    heading: 'Learn about the codebase',
+    message: 'How do we handle asynchronous calls?'
   },
   {
-    heading: 'Draft an email',
-    message: `Draft an email to my boss about the following: \n`
+    heading: 'User interview results',
+    message: `What were the results of my user interview last week?`
   }
 ]
 
@@ -23,19 +23,13 @@ export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
   return (
     <div className="mx-auto max-w-2xl px-4">
       <div className="rounded-lg border bg-background p-8">
-        <h1 className="mb-2 text-lg font-semibold">
-          Welcome to Next.js AI Chatbot!
-        </h1>
+        <h1 className="mb-2 text-lg font-semibold">Welcome to TeamOS!</h1>
         <p className="mb-2 leading-normal text-muted-foreground">
-          This is an open source AI chatbot app template built with{' '}
-          <ExternalLink href="https://nextjs.org">Next.js</ExternalLink> and{' '}
-          <ExternalLink href="https://vercel.com/storage/kv">
-            Vercel KV
-          </ExternalLink>
-          .
+          TeamOS is a search engine for your company's knowledge base. You can
+          perform searches, ask questions, and get relevant answers instantly.
         </p>
         <p className="leading-normal text-muted-foreground">
-          You can start a conversation here or try the following examples:
+          You can start with your own query or try the following examples:
         </p>
         <div className="mt-4 flex flex-col items-start space-y-2">
           {exampleMessages.map((message, index) => (
@@ -49,6 +43,13 @@ export function EmptyScreen({ setInput }: Pick<UseChatHelpers, 'setInput'>) {
               {message.heading}
             </Button>
           ))}
+          <p className="leading-normal text-muted-foreground">
+            If you encounter any issues, please do not hesitate to{' '}
+            <ExternalLink href="mailto:ryanharaki1@gmail.com?subject=TeamOS%20Inquiry">
+              contact support
+            </ExternalLink>
+            .
+          </p>
         </div>
       </div>
     </div>
